@@ -13,13 +13,13 @@ class User {
     }
     play(CasinoList) {
 
-        if (CasinoList.length > 0) {
+        if (CasinoList.length > 0) {//Перевірка чи існує казино
             let ChooseCasino = Number(prompt("Index of casino"))
             if (Number.isInteger(ChooseCasino)) {
                 if (CasinoList.length < ChooseCasino || ChooseCasino <= 0) { //Перевірка чи існує казино з таким індексом
                     console.log(`Error there is no such casino number(start from 1 to ${CasinoList.length})`)
                 } else {
-                    if (CasinoList[ChooseCasino - 1].getMachineCount > 0) {
+                    if (CasinoList[ChooseCasino - 1].getMachineCount > 0) {//Перевірка чи існують гральні машини
                         let ChooseCasinoMachine = Number(prompt("num of machine"))
                         if (Number.isInteger(ChooseCasinoMachine)) {
                             if (CasinoList[ChooseCasino - 1].getMachineCount < ChooseCasinoMachine || ChooseCasinoMachine <= 0) { //Перевірка чи існує гральний автомат з таким індексом
